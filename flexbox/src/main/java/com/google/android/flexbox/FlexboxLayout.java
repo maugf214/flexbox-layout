@@ -675,13 +675,13 @@ public class FlexboxLayout extends ViewGroup {
                         int marginTop = flexLine.mMaxBaseline - child.getBaseline();
                         marginTop = Math.max(marginTop, lp.topMargin);
                         largestHeightInLine = Math.max(largestHeightInLine,
-                                child.getHeight() + marginTop + lp.bottomMargin);
+                                child.getMeasuredHeight() + marginTop + lp.bottomMargin);
                     } else {
                         int marginBottom = flexLine.mMaxBaseline - child.getMeasuredHeight() +
                                 child.getBaseline();
                         marginBottom = Math.max(marginBottom, lp.bottomMargin);
                         largestHeightInLine = Math.max(largestHeightInLine,
-                                child.getHeight() + lp.topMargin + marginBottom);
+                                child.getMeasuredHeight() + lp.topMargin + marginBottom);
                     }
                 }
                 flexLine.mCrossSize = largestHeightInLine;
